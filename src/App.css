@@ -1,38 +1,221 @@
-.App {
-  text-align: center;
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.4rem;
+    line-height: 1;
+    min-width: 1000px;
+    word-break: break-all;
+    background-color: #FFF2D8;
+    color: #113946;
+    /* EAD7BB, BCA37F */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_ttl{
+    text-align: center;
+    font-size: 3rem;
+    padding: 40px 0 20px;
+}
+.header_txt{
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 20px 0 0;
+}
+.container{
+    max-width: 1050px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form{
+    padding-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input_wrapper{
+    display: flex;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.textarea{
+    padding-left: 20px;
+    width: 60%;
 }
 
-.App-link {
-  color: #61dafb;
+.textarea > p{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input_area{
+    padding-right: 20px;
+    width: 40%;
+}
+
+.input_area small{
+    color: #f00;
+}
+
+.input_area > p{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+label{
+    padding-bottom: 5px;
+}
+
+input, textarea{
+    line-height: 1.5;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.submit{
+    background-color: #50C878;
+    color: #fff;
+    border: none;
+    box-shadow: #209545 0 3px;
+    padding: 7px;
+    width: 150px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    transition: .3s;
+    opacity: .6;
+}
+.active{
+    cursor: pointer;
+    opacity: 1;
+}
+.active:hover{
+    box-shadow: none;
+    transform: translateY(3px);
+}
+.fav-contents{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+.contents{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.fav-ttl{
+    text-align: center;
+    padding: 50px 0 10px;
+}
+.fav-subttl{
+    text-align: center;
+    display: block;
+}
+article{
+    width: calc((100% / 3) - 20px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #113946;
+    box-sizing: border-box;
+    transition: .3s;
+
+    padding: 10px;
+}
+article:nth-of-type(3n){
+    margin-right: 0;
+}
+
+.freeText{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 70px;
+    line-height: 1.5;
+    overflow: scroll;
+    border: 1px solid #113946;
+}
+
+.thumbnail {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.date{
+    color: #BCA37F;
+    display: inline-block;
+    padding-top: 10px;
+}
+.place{
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-top: 5px;
+}
+.article_btn{
+    text-align: right;
+}
+.article_btn input{
+    border: 1px solid #113946;
+    padding: 5px 15px;
+    border-radius: 50px;
+    transition: .3s;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.article_btn input:hover{
+    border: 1px solid darkblue;
+    background-color: darkblue;
+    color:#fff;
+    cursor: pointer;
+}
+.article_btn input:disabled{
+    opacity: .7;
+    pointer-events: none;
+}
+/* .article_btn input:disabled:hover{
+    pointer-events: none;
+} */
+
+.blog-content{
+    display: flex;
+    padding-top: 50px;
+}
+.blog-content_thumbnail{
+    width: 50%;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+.blog-content_inner{
+    width: 50%;
+    padding-left: 15px;
+}
+.blog-content .date{
+    font-size: 1.6rem;
+}
+
+.blog-content .country_name{
+    font-size: 2rem;
+    padding-top: 15px;
+}
+.blog-content .city_name{
+    font-size: 1.6rem;
+    padding-top: 15px;
+}
+.blog-content .free_text{
+    padding-top: 15px;
+    line-height: 1.5;
+}
+.blog-content input{
+    margin-top: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
 }
